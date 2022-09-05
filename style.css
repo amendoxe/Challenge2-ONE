@@ -4,6 +4,7 @@
 body {
 	background-color: #f3f5fc;
 	font-family: "Inter", "Franklin Gothic Medium", Arial, sans-serif;
+	font-weight: lighter;
 	margin: 0px;
 	padding: 0px;
 }
@@ -58,9 +59,33 @@ button {
 .page2 {
 	width: 688px;
 	margin: 100px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: space-around;
+	margin-top: 56%;
 }
 .page2 p {
 	color: #0a3871;
 	font-size: 32px;
-	margin: 0;
+	line-height: 48px;
+	margin-top: 0;
+}
+.page2 button {
+	width: 332px;
+	height: 67px;
+}
+.save-start {
+	width: 332px;
+}
+@media screen and (max-width: 480px) {
+	.page2 {
+		width: 100%;
+	}
 }
