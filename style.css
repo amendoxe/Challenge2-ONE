@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #f3f5fc;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: small;
+	margin: 0px;
+	padding: 0px;
+}
+header {
+	margin: 10px 10px;
+}
+.inicio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 250px;
+	margin: 100px auto;
+}
+button {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	border-radius: 24px;
+	cursor: pointer;
+	color: white;
+}
+.inicia {
+	background-color: #0a3871;
+	width: 317px;
+	height: 114px;
+}
+.inicia:hover {
+	background-color: #0e4f9e;
+}
+.inicia:active {
+	background-color: #041a36;
+}
+.agrega {
+	color: #0a3871;
+	background-color: hsl(213, 84%, 24%, 0);
+	margin-top: 38px;
+	width: 280px;
+	height: 67px;
+	border-style: solid;
+}
+.agrega:hover {
+	background-color: #e5eaff;
+}
+.agrega:active {
+	background-color: #7c7d81;
+}
