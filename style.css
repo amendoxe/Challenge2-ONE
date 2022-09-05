@@ -4,6 +4,7 @@
 body {
 	background-color: #f3f5fc;
 	font-family: "Inter", "Franklin Gothic Medium", Arial, sans-serif;
+	color: #0a3871;
 	font-weight: lighter;
 	margin: 0px;
 	padding: 0px;
@@ -121,10 +122,94 @@ button {
 	color: #3b5577;
 }
 
-@media screen and (max-width: 480px) {
+/* Page 3 ------------- */
+.page3 {
+	display: flex;
+	width: 688px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.figura-div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex: 1;
+}
+.mensaje-ganador {
+	color: rgb(132, 203, 26);
+	margin: auto;
+	width: 20%;
+	flex: 0.3;
+}
+.doll_image {
+	text-align: right;
+	margin: 0 auto;
+}
+.letras-correctas {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+.rectangulos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+.rectangulo {
+	width: 10%;
+}
+.letras-incorrectas {
+	display: flex;
+	width: 50%;
+	color: #7c7d81;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.page3 button {
+	width: 332px;
+	height: 67px;
+}
+.juego-nuevo {
+	background-color: #0a3871;
+	color: white;
+	border: none;
+}
+.juego-nuevo:hover {
+	background-color: #0e4f9e;
+}
+.juego-nuevo:active {
+	background-color: #041a36;
+}
+.desistir {
+	background-color: #f3f5fc;
+	color: #0a3871;
+	border: 2px solid #0a3871;
+}
+.desistir:hover {
+	background-color: #e5eaff;
+}
+.desistir:active {
+	background-color: #7c7d81;
+	color: #3b5577;
+}
+@media screen and (max-width: 550px) {
 	.page2 {
 		width: 100%;
 	}
+	.page3 {
+		width: 100%;
+	}
 }
-
-/* Page 3 ------------- */
