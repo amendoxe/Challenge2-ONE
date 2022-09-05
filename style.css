@@ -3,9 +3,7 @@
 }
 body {
 	background-color: #f3f5fc;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	font-size: small;
+	font-family: "Inter", "Franklin Gothic Medium", Arial, sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
@@ -21,7 +19,6 @@ header {
 	margin: 100px auto;
 }
 button {
-	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
@@ -34,6 +31,7 @@ button {
 	background-color: #0a3871;
 	width: 317px;
 	height: 114px;
+	margin-top: 44%;
 }
 .inicia:hover {
 	background-color: #0e4f9e;
@@ -54,4 +52,15 @@ button {
 }
 .agrega:active {
 	background-color: #7c7d81;
+}
+
+/* INGRESANDO PALABRA */
+.page2 {
+	width: 688px;
+	margin: 100px auto;
+}
+.page2 p {
+	color: #0a3871;
+	font-size: 32px;
+	margin: 0;
 }
