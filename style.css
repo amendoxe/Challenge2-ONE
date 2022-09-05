@@ -55,37 +55,76 @@ button {
 	background-color: #7c7d81;
 }
 
-/* INGRESANDO PALABRA */
+/* Page 2 INGRESANDO PALABRA */
 .page2 {
 	width: 688px;
 	margin: 100px auto;
 	display: flex;
 	flex-wrap: wrap;
 }
-.buttons {
+.buttons-section {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: start;
 	justify-content: space-around;
-	margin-top: 56%;
+	margin-top: 30%;
 }
-.page2 p {
-	color: #0a3871;
+.important {
+	width: 100%;
+}
+.importante {
+	font-size: 12px;
+	line-height: 18px;
+	color: #495057;
+}
+
+.ingresa-palabra {
+	color: hsl(213, 84%, 24%, 1);
 	font-size: 32px;
 	line-height: 48px;
 	margin-top: 0;
+	border: none;
+	outline: none;
+	background-color: #f3f5fc;
+}
+.ingresa-palabra::placeholder {
+	color: hsl(213, 84%, 24%, 1);
+	opacity: 1;
 }
 .page2 button {
 	width: 332px;
 	height: 67px;
 }
 .save-start {
-	width: 332px;
+	background-color: #0a3871;
+	color: white;
+	border: none;
 }
+.save-start:hover {
+	background-color: #0e4f9e;
+}
+.save-start:active {
+	background-color: #041a36;
+}
+.cancel-input {
+	background-color: #f3f5fc;
+	color: #0a3871;
+	border: 2px solid #0a3871;
+}
+.cancel-input:hover {
+	background-color: #e5eaff;
+}
+.cancel-input:active {
+	background-color: #7c7d81;
+	color: #3b5577;
+}
+
 @media screen and (max-width: 480px) {
 	.page2 {
 		width: 100%;
 	}
 }
+
+/* Page 3 ------------- */
