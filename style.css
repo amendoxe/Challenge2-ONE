@@ -13,7 +13,7 @@ header {
 	margin: 10px 10px;
 }
 /* Pagina 1-------------- */
-.inicio {
+.page1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -63,7 +63,7 @@ button {
 	margin: 100px auto;
 	display: flex;
 	flex-wrap: wrap;
-	display: none;
+	display: show;
 }
 .buttons-section {
 	width: 100%;
@@ -133,7 +133,7 @@ button {
 	justify-content: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-	display: none;
+	display: show;
 }
 .figura-div {
 	width: 100%;
@@ -152,7 +152,7 @@ button {
 .fin-game {
 	display: none;
 }
-.doll_image {
+.stick-image {
 	text-align: right;
 	margin: 0 auto;
 }

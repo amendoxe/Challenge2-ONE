@@ -16,12 +16,14 @@
 			<a href="index.html"><img src="images/Vector.png" alt="Alura logo" /></a>
 		</header>
 		<main>
-			<section class="inicio">
+			<!-- Pagina 1------------- -->
+			<section class="page1">
 				<button class="inicia">Iniciar Juego</button>
 				<button class="agrega">Agregar Nueva Palabra</button>
 			</section>
-			<section class="page2">
-				<!-- <p>Ingrese una palabra</p> -->
+
+			<!-- Pagina 2------------- -->
+			<section class="page2" id="page2">
 				<input type="text" class="ingresa-palabra" maxlength="8" placeholder="Ingrese una Palabra" />
 				<div class="buttons-section">
 					<div class="important">
@@ -34,9 +36,11 @@
 					<button class="cancel-input">Cancelar</button>
 				</div>
 			</section>
-			<section class="page3">
+
+			<!-- Pagina 3------------- -->
+			<section class="page3" id="page3">
 				<div class="figura-div">
-					<img src="images/figura-9.png" alt="Figura de ahorcado" class="doll_image" />
+					<img src="images/figura-0.png" alt="Figura de ahorcado" class="stick-image" />
 					<h1 class="mensaje-ganador">Felicidades, Ganaste!</h1>
 					<h1 class="fin-game">Fin del Juego</h1>
 				</div>
@@ -77,6 +81,7 @@
 			</section>
 		</main>
 		<footer></footer>
+		<script src="inicio.js"></script>
 		<script src="agregando.js"></script>
 	</body>
 </html>
