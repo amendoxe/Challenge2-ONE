@@ -10,6 +10,11 @@ const buttonDesistirP3 = document.querySelector(".desistir");
 const imagen = document.querySelector(".stick-image");
 let arreglo = ["UNO", "DOS", "TRES", "CUATRO"];
 let pasa = 0;
+pantallaPrincipal();
+function pantallaPrincipal() {
+	hidePagina2();
+	hidePagina3();
+}
 
 function hidePagina1() {
 	pagina1.style.display = "none";
