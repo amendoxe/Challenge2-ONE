@@ -12,6 +12,7 @@ body {
 header {
 	margin: 10px 10px;
 }
+/* Pagina 1-------------- */
 .inicio {
 	display: flex;
 	flex-direction: column;
@@ -62,7 +63,7 @@ button {
 	margin: 100px auto;
 	display: flex;
 	flex-wrap: wrap;
-	display: show;
+	display: none;
 }
 .buttons-section {
 	width: 100%;
@@ -132,7 +133,7 @@ button {
 	justify-content: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-	display: show;
+	display: none;
 }
 .figura-div {
 	width: 100%;
