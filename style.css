@@ -148,9 +148,10 @@ button {
 	margin: auto;
 	width: 20%;
 	flex: 0.3;
+	display: hidden;
 }
 .fin-game {
-	display: none;
+	display: hidden;
 }
 .stick-image {
 	text-align: right;
@@ -162,6 +163,12 @@ button {
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: space-around;
+	width: 100%;
+}
+.letras-bien {
+	letter-spacing: 0.8em;
+	text-align: center;
+	font-size: 80px;
 	width: 100%;
 }
 .rectangulos {

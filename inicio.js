@@ -49,7 +49,7 @@ buttonIniciarP1.addEventListener("click", function () {
 buttonAgregaP1.addEventListener("click", function () {
 	hidePagina1();
 	hidePagina3();
-	// inputU.focus();
+	document.querySelector(".ingresa-palabra").focus();
 	showPagina2();
 	console.log(inputU);
 });
@@ -71,6 +71,7 @@ buttonCancelarP2.addEventListener("click", function () {
 	hidePagina3();
 });
 function agregaPalabra() {
+	document.querySelector(".ingresa-palabra").focus();
 	let inputU = document.querySelector(".ingresa-palabra").value;
 	let inputUpper = inputU.toUpperCase();
 
@@ -93,6 +94,8 @@ buttonNuevoP3.addEventListener("click", function () {
 	hidePagina1();
 	hidePagina2();
 	showPagina3();
+	phrase = "";
+	resetLetters();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
