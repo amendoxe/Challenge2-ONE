@@ -113,6 +113,7 @@ buttonNuevoP3.addEventListener("click", function () {
 	showPagina3();
 	phrase = "";
 	resetLetters();
+	again();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
