@@ -8,7 +8,24 @@ const buttonCancelarP2 = document.querySelector(".cancel-input");
 const buttonNuevoP3 = document.querySelector(".juego-nuevo");
 const buttonDesistirP3 = document.querySelector(".desistir");
 const imagen = document.querySelector(".stick-image");
-let arreglo = ["UNO", "DOS", "TRES", "CUATRO"];
+let arreglo = [
+	"UNO",
+	"DOS",
+	"TRES",
+	"CUATRO",
+	"JAVASCRIPT",
+	"HTML",
+	"PALABRA",
+	"DADO",
+	"APRENDER",
+	"ANEMONA",
+	"ANONIMA",
+	"TACO",
+	"CREMA",
+	"TAMALES",
+	"ESTROFAS",
+	"DELFINES",
+];
 let pasa = 0;
 pantallaPrincipal();
 function pantallaPrincipal() {
