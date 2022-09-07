@@ -7,7 +7,6 @@ showCorrectWords();
 function ranGen() {
 	return Math.floor(Math.random() * arreglo.length);
 }
-console.log(adivinaEsto);
 // Quitar los espacios que no se utilizan
 function hideCorrectWords() {
 	for (let i = 0; i < 8; i++) {
@@ -48,9 +47,9 @@ buttonNuevoP3.addEventListener("click", function () {
 	resetLetters();
 	adivinaEsto = arreglo[`${ranGen()}`];
 	console.log(adivinaEsto);
+	hideRectangles();
 	showCorrectWords();
 	hideMensajes();
-	resetLetters();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
@@ -58,9 +57,9 @@ buttonDesistirP3.addEventListener("click", function () {
 	hidePagina3();
 	hideMensajes();
 	resetLetters();
+	phrase = "";
+	adivinaEsto = arreglo[`${ranGen()}`];
+	console.log(adivinaEsto);
 });
 
 // phrase vs adivinaEsto----------------
-
-if (phrase.length <= adivinaEsto.length) {
-}

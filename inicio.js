@@ -13,7 +13,6 @@ let arreglo = [
 	"DOS",
 	"TRES",
 	"CUATRO",
-	"JAVASCRIPT",
 	"HTML",
 	"PALABRA",
 	"DADO",
