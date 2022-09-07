@@ -58,6 +58,7 @@ buttonNuevoP3.addEventListener("click", function () {
 	hideMensajes();
 	imprimePalabra();
 	resetStyle();
+	varReset();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
@@ -72,4 +73,8 @@ buttonDesistirP3.addEventListener("click", function () {
 	console.log(adivinaEsto);
 });
 
-// phrase vs adivinaEsto----------------
+// resetea variables----------------
+function varReset() {
+	phrase = "";
+	wrongs = "";
+}

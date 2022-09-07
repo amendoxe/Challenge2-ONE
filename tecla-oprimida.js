@@ -28,19 +28,33 @@ function resetLetters() {
 // 		}
 // 	}
 // }
+let wrongs = "";
+let indexesSum = 0;
+let intentosTotales = 8;
+
 function checkInAdivina() {
-	if (adivinaEsto.indexOf(typedWordUpp) >= -1) {
+	if (adivinaEsto.indexOf(typedWordUpp) > -1) {
 		const indexes = [...adivinaEsto.matchAll(new RegExp(typedWord, "gi"))].map((a) => a.index);
 		console.log(indexes);
-
-		console.log(indexes);
-		let indexPosition = adivinaEsto.indexOf(typedWordUpp);
-		let palabraEncontrada = document.querySelector(`.num${indexPosition}`);
-		palabraEncontrada.style.color = "#0a3871";
-		console.log("posicion del typedWord: " + indexPosition);
-		console.log(adivinaEsto.includes(typedWordUpp));
+		indexes.forEach((element) => {
+			let palabraEncontrada = document.querySelector(`.num${element}`);
+			palabraEncontrada.style.color = "#0a3871";
+			console.log("posicion del typedWord: " + element);
+		});
+	} else {
+		wrongs += typedWordUpp;
+		console.log("no acertadas " + wrongs);
+		for (let i = 0; i < wrongs.length; i++) {
+			document.querySelector(`.incorrecta-num${i}`).innerText = wrongs[`${i}`];
+		}
 	}
 }
+
+// let indexPosition = adivinaEsto.indexOf(typedWordUpp);
+// let palabraEncontrada = document.querySelector(`.num${indexPosition}`);
+// palabraEncontrada.style.color = "#0a3871";
+// console.log("posicion del typedWord: " + indexPosition);
+// console.log(adivinaEsto.includes(typedWordUpp));
 function imprimePalabra() {
 	for (let i = 0; i < adivinaEsto.length; i++) {
 		document.querySelector(`.num${i}`).innerText = adivinaEsto[`${i}`];
@@ -53,14 +67,11 @@ document.addEventListener("keyup", function (event) {
 	console.log("Phrase " + phrase);
 	console.log("Typed" + typedWord);
 
-	if (phrase.length <= adivinaEsto.length) {
-		// console.log(adivinaEsto.includes(typedWordUpp));
+	if (phrase.length < intentosTotales) {
+		// Aquí se escriben los valores
 		checkInAdivina();
-		//isItDefined();
-		//   Aquí se escriben los valores
-		// console.log(`Primera tecla oprimida ${phrase}`);
 	} else {
-		phrase = "";
+		varReset();
 		//detener el juego
 		mensajeFin.style.display = "";
 		mensajeGanador.style.display = "";

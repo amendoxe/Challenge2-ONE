@@ -65,6 +65,7 @@ buttonIniciarP1.addEventListener("click", function () {
 	showPagina3();
 	imprimePalabra();
 	resetStyle();
+	varReset();
 });
 buttonAgregaP1.addEventListener("click", function () {
 	hidePagina1();
@@ -78,6 +79,7 @@ buttonGuardarP2.addEventListener("click", function () {
 	agregaPalabra();
 	imprimePalabra();
 	resetStyle();
+	varReset();
 
 	if (pasa === 1) {
 		// pasa = 0;
