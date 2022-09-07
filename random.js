@@ -26,6 +26,12 @@ function hideIncorrectWords() {
 		correct.style.display = "none";
 	}
 }
+function resetStyle() {
+	for (let i = 0; i < 8; i++) {
+		let style = document.querySelector(`.num${i}`);
+		style.style.color = "#f3f5fc";
+	}
+}
 
 //Aparece lo que se va a usar----------------------------
 function showCorrectWords() {
@@ -50,10 +56,14 @@ buttonNuevoP3.addEventListener("click", function () {
 	hideRectangles();
 	showCorrectWords();
 	hideMensajes();
+	imprimePalabra();
+	resetStyle();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
 	hidePagina2();
+	imprimePalabra();
+
 	hidePagina3();
 	hideMensajes();
 	resetLetters();

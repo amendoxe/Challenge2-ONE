@@ -20,24 +20,23 @@ function resetLetters() {
 	document.querySelector(".incorrecta-num6").innerText = "";
 	document.querySelector(".incorrecta-num7").innerText = "";
 }
-function isItDefined() {
-	for (let i = 0; i < phrase.length; i++) {
-		if ((document.querySelector(`.num${i}`).innerText = undefined)) {
-			document.querySelector(`.num${i}`).innerText = "";
-			document.querySelector(`.incorrecta-num${i}`).innerText = "";
-		}
-	}
-}
-// 		//Escribe las palabras
-// 		else if (adivinaEsto.indexOf(phrase) !== -1) {
-// 			document.querySelector(`.num${i}`).innerText = phrase[`${i}`].toUpperCase();
-// 		} /*if (adivinaEsto.indexOf(typedWord) !== -1)*/ else {
-// 			document.querySelector(`.incorrecta-num${i}`).innerText = adivinaEsto[`${i}`].toUpperCase();
-// 			console.log("es un elemento" + adivinaEsto);
+// function isItDefined() {
+// 	for (let i = 0; i < phrase.length; i++) {
+// 		if ((document.querySelector(`.num${i}`).innerText = undefined)) {
+// 			document.querySelector(`.num${i}`).innerText = "";
+// 			document.querySelector(`.incorrecta-num${i}`).innerText = "";
 // 		}
 // 	}
 // }
-
+function checkInAdivina() {
+	if (adivinaEsto.indexOf(typedWord)) {
+	}
+}
+function imprimePalabra() {
+	for (let i = 0; i < adivinaEsto.length; i++) {
+		document.querySelector(`.num${i}`).innerText = adivinaEsto[`${i}`];
+	}
+}
 document.addEventListener("keyup", function (event) {
 	typedWord = event.key;
 	phrase += typedWord.toUpperCase();
@@ -45,7 +44,9 @@ document.addEventListener("keyup", function (event) {
 	console.log("Typed" + typedWord);
 
 	if (phrase.length <= adivinaEsto.length) {
-		isItDefined(); //   Aquí se escriben los valores
+		checkInAdivina();
+		//isItDefined();
+		//   Aquí se escriben los valores
 		// console.log(`Primera tecla oprimida ${phrase}`);
 	} else {
 		phrase = "";

@@ -58,16 +58,13 @@ function hideMensajes() {
 	mensajeFin.style.display = "none";
 	mensajeGanador.style.display = "none";
 }
-function iniciarJuego() {}
-function agregarNuevaPalabra() {}
-function guardarYEmpezar() {}
-function cancelar() {}
-function nuevoJuego() {}
-function desistir() {}
+
 buttonIniciarP1.addEventListener("click", function () {
 	hidePagina1();
 	hidePagina2();
 	showPagina3();
+	imprimePalabra();
+	resetStyle();
 });
 buttonAgregaP1.addEventListener("click", function () {
 	hidePagina1();
@@ -79,6 +76,8 @@ buttonAgregaP1.addEventListener("click", function () {
 buttonGuardarP2.addEventListener("click", function () {
 	hidePagina1();
 	agregaPalabra();
+	imprimePalabra();
+	resetStyle();
 
 	if (pasa === 1) {
 		// pasa = 0;
