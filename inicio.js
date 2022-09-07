@@ -26,11 +26,15 @@ let arreglo = [
 	"ESTROFAS",
 	"DELFINES",
 ];
+const mensajeFin = document.querySelector(".fin-game");
+const mensajeGanador = document.querySelector(".mensaje-ganador");
+
 let pasa = 0;
 pantallaPrincipal();
 function pantallaPrincipal() {
 	hidePagina2();
 	hidePagina3();
+	hideMensajes();
 }
 
 function hidePagina1() {
@@ -51,7 +55,10 @@ function showPagina2() {
 function showPagina3() {
 	pagina3.style.display = "";
 }
-
+function hideMensajes() {
+	mensajeFin.style.display = "none";
+	mensajeGanador.style.display = "none";
+}
 function iniciarJuego() {}
 function agregarNuevaPalabra() {}
 function guardarYEmpezar() {}
@@ -107,16 +114,3 @@ function agregaPalabra() {
 		inputUpper = inputU.toUpperCase();
 	}
 }
-buttonNuevoP3.addEventListener("click", function () {
-	hidePagina1();
-	hidePagina2();
-	showPagina3();
-	phrase = "";
-	resetLetters();
-	again();
-});
-buttonDesistirP3.addEventListener("click", function () {
-	showPagina1();
-	hidePagina2();
-	hidePagina3();
-});

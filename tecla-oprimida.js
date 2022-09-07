@@ -21,19 +21,21 @@ function isItDefined() {
 		}
 	}
 }
+
 document.addEventListener("keyup", function (event) {
 	typedWord = event.key;
 	phrase += typedWord;
 	console.log(phrase);
 	console.log(typedWord);
-	if (phrase.length < 8) {
-	}
-	if (phrase.length <= 8) {
+
+	if (phrase.length < adivinaEsto.length) {
 		isItDefined();
 
 		console.log(`Primera tecla oprimida ${phrase}`);
 	} else {
 		phrase = "";
-		resetLetters();
+		//detener el juego
+		mensajeFin.style.display = "";
+		mensajeGanador.style.display = "";
 	}
 });
