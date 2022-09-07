@@ -29,7 +29,16 @@ function resetLetters() {
 // 	}
 // }
 function checkInAdivina() {
-	if (adivinaEsto.indexOf(typedWord)) {
+	if (adivinaEsto.indexOf(typedWordUpp) >= -1) {
+		const indexes = [...adivinaEsto.matchAll(new RegExp(typedWord, "gi"))].map((a) => a.index);
+		console.log(indexes);
+
+		console.log(indexes);
+		let indexPosition = adivinaEsto.indexOf(typedWordUpp);
+		let palabraEncontrada = document.querySelector(`.num${indexPosition}`);
+		palabraEncontrada.style.color = "#0a3871";
+		console.log("posicion del typedWord: " + indexPosition);
+		console.log(adivinaEsto.includes(typedWordUpp));
 	}
 }
 function imprimePalabra() {
@@ -39,11 +48,13 @@ function imprimePalabra() {
 }
 document.addEventListener("keyup", function (event) {
 	typedWord = event.key;
+	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
 	console.log("Phrase " + phrase);
 	console.log("Typed" + typedWord);
 
 	if (phrase.length <= adivinaEsto.length) {
+		// console.log(adivinaEsto.includes(typedWordUpp));
 		checkInAdivina();
 		//isItDefined();
 		//   Aquí se escriben los valores
