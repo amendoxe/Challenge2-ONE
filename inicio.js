@@ -83,6 +83,7 @@ buttonGuardarP2.addEventListener("click", function () {
 	hideMensajes();
 	resetLetters();
 	adivinaEsto = arreglo[`${ranGen()}`];
+	console.log(adivinaEsto);
 	imprimePalabra();
 	// showPagina3();
 
