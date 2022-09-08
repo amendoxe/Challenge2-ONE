@@ -1,7 +1,6 @@
 let adivinaEsto = arreglo[`${ranGen()}`];
 console.log(adivinaEsto);
 hideCorrectWords();
-hideRectangles();
 hideIncorrectWords();
 showCorrectWords();
 function ranGen() {
@@ -14,12 +13,7 @@ function hideCorrectWords() {
 		correct.style.display = "none";
 	}
 }
-function hideRectangles() {
-	// for (let i = 0; i < 8; i++) {
-	// 	let cuac = document.querySelector(`.rectangulo${i}`);
-	// 	cuac.style.display = "none";
-	// }
-}
+
 function hideIncorrectWords() {
 	for (let i = 0; i < 8; i++) {
 		let correct = document.querySelector(`.incorrecta-num${i}`);
@@ -37,10 +31,8 @@ function resetStyle() {
 function showCorrectWords() {
 	for (let i = 0; i < adivinaEsto.length; i++) {
 		let palabraAparece = document.querySelector(`.num${i}`);
-		// let rectanguloAparece = document.querySelector(`.rectangulo${i}`);
 		let incorrectaAparece = document.querySelector(`.incorrecta-num${i}`);
 		palabraAparece.style.display = "";
-		// rectanguloAparece.style.display = "";
 		incorrectaAparece.style.display = "";
 	}
 }
