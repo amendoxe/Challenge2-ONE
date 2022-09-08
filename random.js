@@ -77,4 +77,5 @@ buttonDesistirP3.addEventListener("click", function () {
 function varReset() {
 	phrase = "";
 	wrongs = "";
+	rights = 0;
 }

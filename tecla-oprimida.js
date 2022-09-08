@@ -28,8 +28,11 @@ function resetLetters() {
 // 		}
 // 	}
 // }
+
 let wrongs = "";
-let indexesSum = 0;
+let rights = 0; //Palabras acertadas
+let rightWords = "";
+let indexesSum = 0; //MAYbe Maybe
 let intentosTotales = 8;
 
 function checkInAdivina() {
@@ -37,15 +40,20 @@ function checkInAdivina() {
 		const indexes = [...adivinaEsto.matchAll(new RegExp(typedWord, "gi"))].map((a) => a.index);
 		console.log(indexes);
 		indexes.forEach((element) => {
+			rights = rights + 1;
 			let palabraEncontrada = document.querySelector(`.num${element}`);
 			palabraEncontrada.style.color = "#0a3871";
+
 			console.log("posicion del typedWord: " + element);
+			console.log("rights: " + rights);
+			//agregando palabras a rightwords
 		});
 	} else {
 		wrongs += typedWordUpp;
 		console.log("no acertadas " + wrongs);
 		for (let i = 0; i < wrongs.length; i++) {
 			document.querySelector(`.incorrecta-num${i}`).innerText = wrongs[`${i}`];
+			console.log("wrongs: " + wrongs.length);
 		}
 	}
 }
@@ -64,17 +72,25 @@ document.addEventListener("keyup", function (event) {
 	typedWord = event.key;
 	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
-	console.log("Phrase " + phrase);
+	// console.log("Phrase " + phrase);
 	console.log("Typed" + typedWord);
 
-	if (phrase.length < intentosTotales) {
+	if (rights <= intentosTotales || wrongs < intentosTotales) {
+		//antes era phrase.length
 		// Aquí se escriben los valores
 		checkInAdivina();
-	} else {
+	}
+	if (rights == adivinaEsto.length) {
 		varReset();
-		//detener el juego
-		mensajeFin.style.display = "";
 		mensajeGanador.style.display = "";
+	}
+	if (wrongs.length == intentosTotales) {
+		varReset();
+		mensajeFin.style.display = "";
+	} else {
+		console.log("Mesnaje defautl");
+		//varReset();
+		//detener el juego
 		// fin = 1;
 	}
 });
