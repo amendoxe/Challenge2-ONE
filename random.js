@@ -15,10 +15,10 @@ function hideCorrectWords() {
 	}
 }
 function hideRectangles() {
-	for (let i = 0; i < 8; i++) {
-		let cuac = document.querySelector(`.rectangulo${i}`);
-		cuac.style.display = "none";
-	}
+	// for (let i = 0; i < 8; i++) {
+	// 	let cuac = document.querySelector(`.rectangulo${i}`);
+	// 	cuac.style.display = "none";
+	// }
 }
 function hideIncorrectWords() {
 	for (let i = 0; i < 8; i++) {
@@ -37,10 +37,10 @@ function resetStyle() {
 function showCorrectWords() {
 	for (let i = 0; i < adivinaEsto.length; i++) {
 		let palabraAparece = document.querySelector(`.num${i}`);
-		let rectanguloAparece = document.querySelector(`.rectangulo${i}`);
+		// let rectanguloAparece = document.querySelector(`.rectangulo${i}`);
 		let incorrectaAparece = document.querySelector(`.incorrecta-num${i}`);
 		palabraAparece.style.display = "";
-		rectanguloAparece.style.display = "";
+		// rectanguloAparece.style.display = "";
 		incorrectaAparece.style.display = "";
 	}
 }
@@ -49,7 +49,6 @@ buttonNuevoP3.addEventListener("click", function () {
 	hidePagina1();
 	hidePagina2();
 	showPagina3();
-	phrase = "";
 	resetLetters();
 	adivinaEsto = arreglo[`${ranGen()}`];
 	console.log(adivinaEsto);
