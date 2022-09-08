@@ -44,7 +44,6 @@ buttonNuevoP3.addEventListener("click", function () {
 	resetLetters();
 	adivinaEsto = arreglo[`${ranGen()}`];
 	console.log(adivinaEsto);
-	hideRectangles();
 	showCorrectWords();
 	hideMensajes();
 	imprimePalabra();
