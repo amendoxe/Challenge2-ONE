@@ -73,7 +73,7 @@ function imprimePalabra() {
 		document.querySelector(`.num${i}`).innerText = adivinaEsto[`${i}`];
 	}
 }
-document.addEventListener("keyup", function (event) {
+document.addEventListener("keyup", function game(event) {
 	typedWord = event.key;
 	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
@@ -89,11 +89,13 @@ document.addEventListener("keyup", function (event) {
 	if (rights == adivinaEsto.length) {
 		varReset();
 		mensajeGanador.style.display = "";
+		bloqueaControles();
 	}
 	if (wrongs.length == intentosTotales) {
 		varReset();
 		mensajeFin.style.display = "";
 		imagenJuego.src = `images/figura-8.png`;
+		bloqueaControles();
 	} else {
 		console.log("Mesnaje defautl");
 		//varReset();

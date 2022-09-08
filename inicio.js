@@ -72,14 +72,18 @@ buttonAgregaP1.addEventListener("click", function () {
 	hidePagina3();
 	document.querySelector(".ingresa-palabra").focus();
 	showPagina2();
-	console.log(inputU);
 });
 buttonGuardarP2.addEventListener("click", function () {
 	hidePagina1();
 	agregaPalabra();
-	imprimePalabra();
 	resetStyle();
 	varReset();
+	resetLetters();
+	hideMensajes();
+	resetLetters();
+	adivinaEsto = arreglo[`${ranGen()}`];
+	imprimePalabra();
+	showPagina3();
 
 	if (pasa === 1) {
 		// pasa = 0;

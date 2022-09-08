@@ -80,3 +80,4 @@ function varReset() {
 	rights = 0;
 	imagenJuego.src = `images/figura-0.png`;
 }
+function bloqueaControles() {}
