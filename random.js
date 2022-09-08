@@ -54,7 +54,6 @@ buttonNuevoP3.addEventListener("click", function () {
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
 	hidePagina2();
-	imprimePalabra();
 
 	hidePagina3();
 	hideMensajes();
@@ -62,6 +61,7 @@ buttonDesistirP3.addEventListener("click", function () {
 	phrase = "";
 	adivinaEsto = arreglo[`${ranGen()}`];
 	console.log(adivinaEsto);
+	imprimePalabra();
 });
 
 // resetea variables----------------
