@@ -72,8 +72,8 @@ buttonIniciarP1.addEventListener("click", function () {
 buttonAgregaP1.addEventListener("click", function () {
 	hidePagina1();
 	hidePagina3();
-	document.querySelector(".ingresa-palabra").focus();
 	showPagina2();
+	document.querySelector(".ingresa-palabra").focus();
 });
 buttonGuardarP2.addEventListener("click", function () {
 	hidePagina1();
