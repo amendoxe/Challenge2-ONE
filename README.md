@@ -14,3 +14,4 @@ Se tienen 9 intentos para adivinar cada palabra.
 Aún no está perfecto el juego pero quería entregar el proyecto funcional antes de la clase de live coding, más que nada como reto personal, para ver que tan bien podía llegar a una solución y pues hasta ahora estoy contento con mi avance.
 
 Me faltan varios detalles, pero seguiré arreglando varias cosas.
+![challenge2](https://user-images.githubusercontent.com/99451129/189024563-5f3afd26-9d65-4b1f-a1fb-8f0e2f664acb.gif)
