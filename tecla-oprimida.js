@@ -20,14 +20,6 @@ function resetLetters() {
 	document.querySelector(".incorrecta-num6").innerText = "";
 	document.querySelector(".incorrecta-num7").innerText = "";
 }
-// function isItDefined() {
-// 	for (let i = 0; i < phrase.length; i++) {
-// 		if ((document.querySelector(`.num${i}`).innerText = undefined)) {
-// 			document.querySelector(`.num${i}`).innerText = "";
-// 			document.querySelector(`.incorrecta-num${i}`).innerText = "";
-// 		}
-// 	}
-// }
 
 let wrongs = "";
 let rights = 0; //Palabras acertadas
@@ -63,17 +55,16 @@ function checkInAdivina() {
 	}
 }
 
-// let indexPosition = adivinaEsto.indexOf(typedWordUpp);
-// let palabraEncontrada = document.querySelector(`.num${indexPosition}`);
-// palabraEncontrada.style.color = "#0a3871";
-// console.log("posicion del typedWord: " + indexPosition);
-// console.log(adivinaEsto.includes(typedWordUpp));
 function imprimePalabra() {
 	for (let i = 0; i < adivinaEsto.length; i++) {
 		document.querySelector(`.num${i}`).innerText = adivinaEsto[`${i}`];
 	}
 }
-document.addEventListener("keyup", function game(event) {
+function comienzaAEscuchar() {
+	document.addEventListener("keyup", listenKeyboard);
+}
+
+function listenKeyboard(event) {
 	typedWord = event.key;
 	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
@@ -81,25 +72,24 @@ document.addEventListener("keyup", function game(event) {
 	console.log("Typed" + typedWord);
 
 	if (rights <= intentosTotales || wrongs < intentosTotales) {
-		//antes era phrase.length
 		// Aquí se escriben los valores
-
 		checkInAdivina();
 	}
 	if (rights == adivinaEsto.length) {
 		varReset();
 		mensajeGanador.style.display = "";
-		bloqueaControles();
+		dontListenAnymore();
 	}
 	if (wrongs.length == intentosTotales) {
 		varReset();
 		mensajeFin.style.display = "";
 		imagenJuego.src = `images/figura-8.png`;
-		bloqueaControles();
+		dontListenAnymore();
 	} else {
 		console.log("Mesnaje defautl");
-		//varReset();
-		//detener el juego
-		// fin = 1;
 	}
-});
+}
+
+function dontListenAnymore() {
+	document.removeEventListener("keyup", listenKeyboard);
+}

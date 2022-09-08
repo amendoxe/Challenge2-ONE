@@ -66,6 +66,7 @@ buttonIniciarP1.addEventListener("click", function () {
 	imprimePalabra();
 	resetStyle();
 	varReset();
+	comienzaAEscuchar();
 	// hideIncorrectWords();
 });
 buttonAgregaP1.addEventListener("click", function () {
@@ -85,6 +86,7 @@ buttonGuardarP2.addEventListener("click", function () {
 	adivinaEsto = arreglo[`${ranGen()}`];
 	console.log(adivinaEsto);
 	imprimePalabra();
+	comienzaAEscuchar();
 	// showPagina3();
 
 	if (pasa === 1) {

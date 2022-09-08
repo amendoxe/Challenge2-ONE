@@ -58,6 +58,7 @@ buttonNuevoP3.addEventListener("click", function () {
 	imprimePalabra();
 	resetStyle();
 	varReset();
+	comienzaAEscuchar();
 });
 buttonDesistirP3.addEventListener("click", function () {
 	showPagina1();
@@ -79,4 +80,3 @@ function varReset() {
 	rights = 0;
 	imagenJuego.src = `images/figura-0.png`;
 }
-function bloqueaControles() {}
