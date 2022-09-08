@@ -34,6 +34,7 @@ let rights = 0; //Palabras acertadas
 let rightWords = "";
 let indexesSum = 0; //MAYbe Maybe
 let intentosTotales = 8;
+const imagenJuego = document.querySelector(".stick-image");
 
 function checkInAdivina() {
 	if (adivinaEsto.indexOf(typedWordUpp) > -1) {
@@ -53,6 +54,10 @@ function checkInAdivina() {
 		console.log("no acertadas " + wrongs);
 		for (let i = 0; i < wrongs.length; i++) {
 			document.querySelector(`.incorrecta-num${i}`).innerText = wrongs[`${i}`];
+			//imagen
+			for (let i = 0; i <= wrongs.length; i++) {
+				imagenJuego.src = `images/figura-${i}.png`;
+			}
 			console.log("wrongs: " + wrongs.length);
 		}
 	}
@@ -78,6 +83,7 @@ document.addEventListener("keyup", function (event) {
 	if (rights <= intentosTotales || wrongs < intentosTotales) {
 		//antes era phrase.length
 		// Aquí se escriben los valores
+
 		checkInAdivina();
 	}
 	if (rights == adivinaEsto.length) {
@@ -87,6 +93,7 @@ document.addEventListener("keyup", function (event) {
 	if (wrongs.length == intentosTotales) {
 		varReset();
 		mensajeFin.style.display = "";
+		imagenJuego.src = `images/figura-8.png`;
 	} else {
 		console.log("Mesnaje defautl");
 		//varReset();
