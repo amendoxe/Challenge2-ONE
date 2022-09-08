@@ -23,34 +23,38 @@ function resetLetters() {
 
 let wrongs = "";
 let rights = 0; //Palabras acertadas
-let rightWords = "";
+let fraseDeEscritas = "";
 let indexesSum = 0; //MAYbe Maybe
 let intentosTotales = 8;
 const imagenJuego = document.querySelector(".stick-image");
+let indexesReg = [];
 
 function checkInAdivina() {
 	if (adivinaEsto.indexOf(typedWordUpp) > -1) {
-		const indexes = [...adivinaEsto.matchAll(new RegExp(typedWord, "gi"))].map((a) => a.index);
-		console.log(indexes);
-		indexes.forEach((element) => {
-			rights = rights + 1;
-			let palabraEncontrada = document.querySelector(`.num${element}`);
-			palabraEncontrada.style.color = "#0a3871";
-
-			console.log("posicion del typedWord: " + element);
-			console.log("rights: " + rights);
-			//agregando palabras a rightwords
-		});
+		const indexes = [...adivinaEsto.matchAll(new RegExp(typedWordUpp, "gi"))].map((a) => a.index);
+		if (indexesReg.indexOf(indexes) === -1) {
+			indexesReg += indexes;
+			console.log("indexes" + indexes);
+			indexes.forEach((element) => {
+				rights = rights + 1;
+				fraseDeEscritas += typedWordUpp;
+				console.log("rights: " + rights);
+				let palabraEncontrada = document.querySelector(`.num${element}`);
+				palabraEncontrada.style.color = "#0a3871";
+			});
+		}
 	} else {
-		wrongs += typedWordUpp;
-		console.log("no acertadas " + wrongs);
-		for (let i = 0; i < wrongs.length; i++) {
-			document.querySelector(`.incorrecta-num${i}`).innerText = wrongs[`${i}`];
-			//imagen
-			for (let i = 0; i <= wrongs.length; i++) {
-				imagenJuego.src = `images/figura-${i}.png`;
+		if (wrongs.indexOf(typedWordUpp) === -1) {
+			wrongs += typedWordUpp;
+			console.log("no acertadas " + wrongs);
+			for (let i = 0; i < wrongs.length; i++) {
+				document.querySelector(`.incorrecta-num${i}`).innerText = wrongs[`${i}`];
+				//imagen
+				for (let i = 0; i <= wrongs.length; i++) {
+					imagenJuego.src = `images/figura-${i}.png`;
+				}
+				console.log("wrongs: " + wrongs.length);
 			}
-			console.log("wrongs: " + wrongs.length);
 		}
 	}
 }
@@ -69,7 +73,7 @@ function listenKeyboard(event) {
 	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
 	// console.log("Phrase " + phrase);
-	console.log("Typed" + typedWord);
+	// console.log("Typed" + typedWord);
 
 	if (rights <= intentosTotales || wrongs < intentosTotales) {
 		// Aquí se escriben los valores
@@ -86,7 +90,7 @@ function listenKeyboard(event) {
 		imagenJuego.src = `images/figura-8.png`;
 		dontListenAnymore();
 	} else {
-		console.log("Mesnaje defautl");
+		console.log("Mensaje default");
 	}
 }
 
