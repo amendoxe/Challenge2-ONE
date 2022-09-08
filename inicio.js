@@ -66,6 +66,7 @@ buttonIniciarP1.addEventListener("click", function () {
 	imprimePalabra();
 	resetStyle();
 	varReset();
+	// hideIncorrectWords();
 });
 buttonAgregaP1.addEventListener("click", function () {
 	hidePagina1();
@@ -83,7 +84,7 @@ buttonGuardarP2.addEventListener("click", function () {
 	resetLetters();
 	adivinaEsto = arreglo[`${ranGen()}`];
 	imprimePalabra();
-	showPagina3();
+	// showPagina3();
 
 	if (pasa === 1) {
 		// pasa = 0;
