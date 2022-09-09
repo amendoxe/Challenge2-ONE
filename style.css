@@ -291,4 +291,7 @@ footer {
 	.page3 {
 		width: 100%;
 	}
+	.stick-image {
+		max-height: 150px;
+	}
 }
