@@ -72,8 +72,6 @@ function listenKeyboard(event) {
 	typedWord = event.key;
 	typedWordUpp = typedWord.toUpperCase();
 	phrase += typedWord.toUpperCase();
-	// console.log("Phrase " + phrase);
-	// console.log("Typed" + typedWord);
 
 	if (rights <= intentosTotales || wrongs < intentosTotales) {
 		// Aquí se escriben los valores
