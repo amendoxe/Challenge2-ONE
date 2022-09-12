@@ -94,6 +94,7 @@ button {
 	border: none;
 	outline: none;
 	background-color: #f3f5fc;
+	text-transform: uppercase;
 }
 .ingresa-palabra::placeholder {
 	color: hsl(213, 84%, 24%, 1);
