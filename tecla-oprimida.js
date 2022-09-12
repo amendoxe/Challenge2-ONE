@@ -80,6 +80,7 @@ function listenKeyboard(event) {
 	if (rights == adivinaEsto.length) {
 		varReset();
 		mensajeGanador.style.display = "";
+		imagenJuego.src = `images/good.png`;
 		dontListenAnymore();
 	}
 	if (wrongs.length == intentosTotales) {

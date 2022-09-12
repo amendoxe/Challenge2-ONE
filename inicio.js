@@ -74,6 +74,10 @@ buttonAgregaP1.addEventListener("click", function () {
 	hidePagina3();
 	showPagina2();
 	document.querySelector(".ingresa-palabra").focus();
+	//prueba
+	resetStyle();
+	varReset();
+	dontListenAnymore();
 });
 buttonGuardarP2.addEventListener("click", function () {
 	hidePagina1();
@@ -96,6 +100,9 @@ buttonGuardarP2.addEventListener("click", function () {
 		console.log(adivinaEsto);
 		imprimePalabra();
 		comienzaAEscuchar();
+		showCorrectWords();
+
+		varReset();
 	} else {
 		showPagina2();
 	}
