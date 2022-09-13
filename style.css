@@ -298,4 +298,11 @@ footer {
 	.stick-image {
 		max-height: 150px;
 	}
+	.letras-correctas {
+		font-size: 19px;
+	}
+	.page3 button {
+		width: 202px;
+		height: 47px;
+	}
 }
