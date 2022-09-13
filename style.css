@@ -146,6 +146,7 @@ button {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	flex: 1;
+	font-size: 0;
 }
 .mensaje-ganador {
 	color: rgb(132, 203, 26);
@@ -153,9 +154,11 @@ button {
 	width: 20%;
 	flex: 0.3;
 	display: hidden;
+	font-size: 40px;
 }
 .fin-game {
 	display: hidden;
+	font-size: 40px;
 }
 .stick-image {
 	text-align: right;
